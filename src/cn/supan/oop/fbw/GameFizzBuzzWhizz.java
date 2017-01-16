@@ -1,5 +1,7 @@
 package cn.supan.oop.fbw;
 
+import cn.supan.oop.fbw.build.GameConcreteBuilder;
+
 /**
  * 游戏类：
  * 	属性：
@@ -16,12 +18,23 @@ package cn.supan.oop.fbw;
 public class GameFizzBuzzWhizz {
     /* 特殊数的数组，在构造方法中初始化*/
     private int[] speicalNums;
-    private static final String ECHO1 = "Fizz";
+    private int gameCount;
+    /*public GameFizzBuzzWhizz(int[] speicalNums) {
+		super();
+		this.speicalNums = speicalNums;
+	}*/
+	private static final String ECHO1 = "Fizz";
     private static final String ECHO2 = "Buzz";
     private static final String ECHO3 = "Whizz";
     /* 构造方法中初始化特殊数数组*/
-    public GameFizzBuzzWhizz(int[] speicalNums) {
+    public GameFizzBuzzWhizz(int[] speicalNums,int gameCount) {
         this.speicalNums = speicalNums;
+        this.gameCount = gameCount;
+        System.out.println("The game is ready to go! Oh,yeah!");
+    }
+    public GameFizzBuzzWhizz(GameConcreteBuilder builder) {
+        this.speicalNums = builder.getSpeicalNums();
+        this.gameCount = builder.getGameCount();
         System.out.println("The game is ready to go! Oh,yeah!");
     }
 
@@ -31,7 +44,7 @@ public class GameFizzBuzzWhizz {
      */
     public void launch() {
         System.out.println("Game start!!!");
-        for (int index = 1; index <= 100; index++) {
+        for (int index = 1; index <= gameCount; index++) {
             if (this.isContainFirstNum(index)) {
                 System.out.println(index + ": " + ECHO1);
             } else {
@@ -44,7 +57,7 @@ public class GameFizzBuzzWhizz {
      * 判断是否包含第一个特殊数:规则五
      */
     private boolean isContainFirstNum(int i) {
-        String firstSpecialNum = Integer.toString(speicalNums[0]);
+        String firstSpecialNum = Integer.toString(speicalNums[0]);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
         String index = Integer.toString(i);
         return index.contains(firstSpecialNum);
     }

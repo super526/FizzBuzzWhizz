@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class GainSpecialNum {
 	//用于接收输入的三个特殊数
 	static int nums[] = new int[3];
-
 	// 调用获取单个输入特殊数的方法，返回一个满足规则的数组
 	public static int[] getSpecialNums() {
 		System.out.println("Please enter the first special number:");
