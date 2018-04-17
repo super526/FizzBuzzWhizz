@@ -23,6 +23,7 @@ public class GainSpecialNum {
 		System.out.println("Please enter the last special number:");
 		nums[2] = getNumber();
 		System.out.println("The speical numbers are: " + getNumsString());
+		System.out.println("hahaa");
 		return nums;
 	}
 
